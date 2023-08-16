@@ -99,9 +99,6 @@ const ListaSuper = () => {
                               <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                                 Status
                               </th>
-                              <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                                Perfil
-                              </th>
 
                             </tr>
                           </thead>

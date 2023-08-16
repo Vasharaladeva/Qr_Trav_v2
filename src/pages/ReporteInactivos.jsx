@@ -84,14 +84,15 @@ const Invoice = () => {
     });
   };
 
-    const [estudiantes, setEstudiantes] = React.useState([]);
-    
+  const [estudiantes, setEstudiantes] = React.useState([]);
+  const [estudiantesCount, setEstudiantesCount] = React.useState(0);
 
   React.useEffect(() => {
     axios
       .get('http://localhost:2000/api/estudianteina')
       .then((response) => {
         setEstudiantes(response.data.estudiantes);
+        setEstudiantesCount(response.data.estudiantesCount);
       })
       .catch((error) => {
         console.log('Error al obtener usuarios inactivos:', error);
@@ -179,7 +180,7 @@ const Invoice = () => {
                             <td colSpan="4">
                               <b>Total Estudiantes:</b>
                             </td>
-                            <td></td>
+                            <td>{estudiantesCount}</td>
                           </tr>
                         </tfoot>
                       </table>
